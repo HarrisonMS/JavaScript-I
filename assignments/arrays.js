@@ -2,6 +2,8 @@
 
 // The car dealer has all of their inventory housed in the array seen below.  Scroll down past the data to find out how you can help the car dealer.
 
+
+
 let inventory = [
   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
   { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
@@ -75,18 +77,42 @@ let inventory = [
 
 // ==== Challenge 1 ====
 // The dealer can't recall the information for a car with an id of 33 on his lot. Help the dealer find out which car has an id of 33 by logging the car's year, make, and model in the console log provided to you below:
-console.log(`Car 33 is a *car year goes here* *car make goes here* *car model goes here*`);
+// console.log(`Car 33 is a *car year goes here* *car make goes here* *car model goes here*`);
+let item33;
 
+for (let i = 0; i < inventory.length; i++) {
+  if (inventory[i].id === 33) {
+    item33 = inventory[i];
+  }
+}
+
+console.log(`Car 33 is a ${item33.car_make} ${item33.car_model} ${item33.car_year}.`)
+
+// let carModels = inventory[34];
+
+// console.log("Car 33 is", "2001", "Jeep", "Wrangler");
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
-let lastCar = 0;
-console.log();
+// arr = [1,2,3,4,5];
+// arr[arr.length-1]
+let lastCar = inventory[inventory.length-1];
+console.log(lastCar.car_make, lastCar.car_model)
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
+// let carModels = inventory;
+// let carModelsSorted = [carModels.sort];
+// console.log(carModels);
+
 let carModels = [];
-let carModelsSorted = [];
-console.log();
+for (i=0; i < inventory.length; i++){
+  if(inventory[i].car_model) {
+    carModels.push(inventory[i].car_model)
+    // carModels.sort()
+  }
+}
+carModels.sort() //Hey Harrison, I was cooking over lunch so I didn't eat yet.  I'm gonna eat now.  I'll be muted and have my camera off but I'm still around!
+console.log(carModels);
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
