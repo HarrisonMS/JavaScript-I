@@ -86,7 +86,7 @@ for (let i = 0; i < inventory.length; i++) {
   }
 }
 
-console.log(`Car 33 is a ${item33.car_make} ${item33.car_model} ${item33.car_year}.`)
+console.log(`Car 33 is a ${item33.car_year} ${item33.car_make} ${item33.car_model}.`)
 
 // let carModels = inventory[34];
 
